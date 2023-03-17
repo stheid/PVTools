@@ -99,12 +99,16 @@
                     v-b-tooltip.hover title='Bei 10kWp muss "10000" eingetragen werden' />
                 </b-input-group>
               </b-form-group>
+
+              <b-button v-b-toggle.shadingCollapse>Verschattung angeben</b-button>
+              <b-collapse id="shadingCollapse">
               <b-form-group label="Verschattung / Horizont (optional)">
                 <b-input-group>
                   <b-input v-model="roofInput.horizon" v-b-tooltip.hover
                     title='Die Horizonthöhe ist ein Winkel von 0° bis 90°. Werte im Norden beginnend dem Uhrzeigersinn nach eingelesen und im gleichen Abstand um den Horizont gelegt. Beispiel: "0 0 15 20 15 0 0 0 0 0 0 0" enspricht leichter Verschattung im Osten.' />
                 </b-input-group>
               </b-form-group>
+              </b-collapse>
 
               <b-button-group>
                 <b-button type="submit">
